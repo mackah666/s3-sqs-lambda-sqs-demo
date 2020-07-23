@@ -13,3 +13,8 @@ resource "aws_sqs_queue" "terraform_queue" {
     Environment = "devlopment"
   }
 }
+
+output "sqs_queue_arn" {
+  value       = "${aws_sqs_queue.queue.arn}"
+  description = "The Id of the security group created."
+}
